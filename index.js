@@ -69,7 +69,8 @@ function getMatchingCatsArray() {
   }
 }
 
-function getEmotionsArray(cats) {
+
+const getEmotionsArray = (cats) => {
   const emotionsArray = [];
   for (let cat of cats) {
     for (let emotion of cat.emotionTags) {
@@ -79,9 +80,9 @@ function getEmotionsArray(cats) {
     }
   }
   return emotionsArray;
-}
+};
 
-function renderEmotionsRadios(cats) {
+const renderEmotionsRadios = (cats) => {
   let radioItems = ``;
   const emotions = getEmotionsArray(cats);
   for (let emotion of emotions) {
