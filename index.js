@@ -7,8 +7,6 @@ const memeModalInner = document.getElementById("meme-modal-inner");
 const memeModal = document.getElementById("meme-modal");
 const memeModalCloseBtn = document.getElementById("meme-modal-close-btn");
 
-getImageBtn.addEventListener("click", renderCat);
-
 // Highlight Options Function & Event Listener
 const highlightCheckedOption = (e) => {
   const radios = document.getElementsByClassName("radio");
@@ -20,10 +18,6 @@ const highlightCheckedOption = (e) => {
 
 emotionRadios.addEventListener("change", highlightCheckedOption);
 
-// function closeModal() {
-//   memeModal.style.display = "none";
-// }
-
 // Close Modal Function & Event Listener
 const closeModal = () => {
   memeModal.style.display = "none";
@@ -31,7 +25,8 @@ const closeModal = () => {
 
 memeModalCloseBtn.addEventListener("click", closeModal);
 
-function renderCat() {
+// Function to RenderCat & Event Listener
+const renderCat = () => {
   const catObject = getSingleCatObject();
   memeModalInner.innerHTML = `
         <img 
@@ -41,7 +36,9 @@ function renderCat() {
         >
         `;
   memeModal.style.display = "flex";
-}
+};
+
+getImageBtn.addEventListener("click", renderCat);
 
 function getSingleCatObject() {
   const catsArray = getMatchingCatsArray();
