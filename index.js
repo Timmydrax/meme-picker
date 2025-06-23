@@ -42,22 +42,22 @@ getImageBtn.addEventListener("click", renderCat);
 
 // Function to get Matching Cats Array
 const getMatchingCatsArray = () => {
-    if (document.querySelector('input[type="radio"]:checked')) {
-        const selectedEmotion = document.querySelector(
-            'input[type="radio"]:checked'
-        ).value;
-        const isGif = gifsOnlyOption.checked;
-        
-        const matchingCatsArray = catsData.filter(function (cat) {
-            if (isGif) {
-                return cat.emotionTags.includes(selectedEmotion) && cat.isGif;
-            } else {
+  if (document.querySelector('input[type="radio"]:checked')) {
+    const selectedEmotion = document.querySelector(
+      'input[type="radio"]:checked'
+    ).value;
+    const isGif = gifsOnlyOption.checked;
+
+    const matchingCatsArray = catsData.filter(function (cat) {
+      if (isGif) {
+        return cat.emotionTags.includes(selectedEmotion) && cat.isGif;
+      } else {
         return cat.emotionTags.includes(selectedEmotion);
       }
     });
     return matchingCatsArray;
   }
-}
+};
 
 // Function to get a Matching Cat from the Array.
 const getSingleCatObject = () => {
@@ -69,7 +69,7 @@ const getSingleCatObject = () => {
     const randomNumber = Math.floor(Math.random() * catsArray.length);
     return catsArray[randomNumber];
   }
-}
+};
 
 // Function to get Emotions Array
 const getEmotionsArray = (cats) => {
@@ -101,6 +101,6 @@ const renderEmotionsRadios = (cats) => {
         </div>`;
   }
   emotionRadios.innerHTML = radioItems;
-}
+};
 
 renderEmotionsRadios(catsData);
