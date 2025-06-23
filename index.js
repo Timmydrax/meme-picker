@@ -40,7 +40,27 @@ const renderCat = () => {
 
 getImageBtn.addEventListener("click", renderCat);
 
-function getSingleCatObject() {
+// Function to get Matching Cats Array
+const getMatchingCatsArray = () => {
+    if (document.querySelector('input[type="radio"]:checked')) {
+        const selectedEmotion = document.querySelector(
+            'input[type="radio"]:checked'
+        ).value;
+        const isGif = gifsOnlyOption.checked;
+        
+        const matchingCatsArray = catsData.filter(function (cat) {
+            if (isGif) {
+                return cat.emotionTags.includes(selectedEmotion) && cat.isGif;
+            } else {
+        return cat.emotionTags.includes(selectedEmotion);
+      }
+    });
+    return matchingCatsArray;
+  }
+}
+
+// Function to get a Matching Cat from the Array.
+const getSingleCatObject = () => {
   const catsArray = getMatchingCatsArray();
 
   if (catsArray.length === 1) {
@@ -48,24 +68,6 @@ function getSingleCatObject() {
   } else {
     const randomNumber = Math.floor(Math.random() * catsArray.length);
     return catsArray[randomNumber];
-  }
-}
-
-function getMatchingCatsArray() {
-  if (document.querySelector('input[type="radio"]:checked')) {
-    const selectedEmotion = document.querySelector(
-      'input[type="radio"]:checked'
-    ).value;
-    const isGif = gifsOnlyOption.checked;
-
-    const matchingCatsArray = catsData.filter(function (cat) {
-      if (isGif) {
-        return cat.emotionTags.includes(selectedEmotion) && cat.isGif;
-      } else {
-        return cat.emotionTags.includes(selectedEmotion);
-      }
-    });
-    return matchingCatsArray;
   }
 }
 
