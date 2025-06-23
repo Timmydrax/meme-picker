@@ -71,7 +71,7 @@ const getSingleCatObject = () => {
   }
 }
 
-
+// Function to get Emotions Array
 const getEmotionsArray = (cats) => {
   const emotionsArray = [];
   for (let cat of cats) {
@@ -84,6 +84,7 @@ const getEmotionsArray = (cats) => {
   return emotionsArray;
 };
 
+// Function to Render Radio input
 const renderEmotionsRadios = (cats) => {
   let radioItems = ``;
   const emotions = getEmotionsArray(cats);
