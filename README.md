@@ -1,19 +1,21 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# 😂 Meme Generator App
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+A simple and fun **Meme Generator** built with **HTML**, **CSS**, and **JavaScript**. This app allows users to view and enjoy randomly selected memes at the click of a button. A great beginner-friendly project to understand working with APIs or static data, DOM manipulation, and dynamic rendering.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## 🎉 Features
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+- View random memes
+- Dynamic image and caption rendering
+- Clean, responsive layout
+- Use static meme data (like a JSON or `data.js` file)
+- Reload memes with a button click
 
-Happy Coding!# meme-picker
+## 🧰 Technologies Used
+
+- HTML5
+- CSS3 (Flexbox)
+- Vanilla JavaScript (ES6+)
+- Optionally: External Meme API (e.g., Imgflip or Reddit Memes)
+
+## 📁 File Structure
+
